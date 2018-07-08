@@ -73,9 +73,6 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-war-plugin</artifactId>
         <version>3.2.2</version>
-      <configuration>
-        <webXml>src\main\webapp\WEB-INF\web.xml</webXml>        
-      </configuration> 
       </dependency>
 	  <dependency>
 	    <groupId>org.apache.maven.plugins</groupId>
@@ -87,6 +84,9 @@
     <directory>target</directory>
     <outputDirectory>target/classes</outputDirectory>
     <sourceDirectory>src/main/java</sourceDirectory>
+    <configuration>
+        <webXml>src\main\webapp\WEB-INF\web.xml</webXml>        
+      </configuration> 
     <resources>
       <resource>
         <directory>src/main/resources</directory>
