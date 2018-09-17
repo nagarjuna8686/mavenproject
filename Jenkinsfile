@@ -3,10 +3,12 @@ pipeline {
   stages {
     stage('scm checkout') {
       steps {
-        sh '''node{
-    stage(\'scm checkout\'){
-        git \'https://github.com/nagarjuna8686/mavenproject.git\'
-    }
+        sh '''pipeline{
+    agent{
+       stage(\'scm checkout\'){
+          git \'https://github.com/nagarjuna8686/mavenproject.git\'
+       }
+     }
 }'''
         }
       }
